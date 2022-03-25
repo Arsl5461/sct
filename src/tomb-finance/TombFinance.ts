@@ -307,7 +307,7 @@ export class TombFinance {
     if (depositTokenName.startsWith('SCT')) {
       return rewardPerSecond.mul(30000).div(59500);
     } else if (depositTokenName.startsWith('PSHARES')) {
-      return rewardPerSecond.mul(29500).div(59500);
+      return rewardPerSecond.mul(30000).div(59500);
     } else {
       return rewardPerSecond.mul(0).div(59500);
     }

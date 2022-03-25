@@ -54,7 +54,7 @@ const Cemetery = () => {
   const activeBanks = banks.filter((bank) => !bank.finished);
   const GenesisPoolStartTimeStamp = 1648346400;
   const MainFarmStartTimeStamp = 1648346400;
-
+console.log(activeBanks,"Active Banks")
   return (
     <Switch>
       <Page>
@@ -69,7 +69,7 @@ const Cemetery = () => {
               </Typography>
                 <div className='bio wheat center'>Earn TSHARE by staking LP</div>
               <Box mt={5}>
-                <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 3).length === 0}>
+                <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
                   {/* <Typography color="textPrimary" variant="h4" gutterBottom>
                     <strong style={{color:"#ff4c39"}}>Earn PSHARES by staking LP Tokens</strong>
                   </Typography> */}
@@ -111,7 +111,8 @@ const Cemetery = () => {
     </div>
 
 </div> */}
-                  <Grid container spacing={2}>
+
+                  <Grid container spacing={1}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 2)
                       .map((bank) => (
@@ -120,20 +121,21 @@ const Cemetery = () => {
                         </React.Fragment>
                       ))}
                   </Grid>
-                </div>
+                
+               
 
-                <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 1).length === 0}>
-                  {/* <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
+                {/* <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
+                  <Typography color="textPrimary" variant="h4" gutterBottom style={{ marginTop: '20px' }}>
                     <strong style={{color:"#ff4c39"}}>Earn SCT by staking LP Tokens</strong>
-                  </Typography> */}
-                  {/* <Alert variant="filled" severity="warning">
+                  </Typography>
+                  <Alert variant="filled" severity="warning">
                     All below pools have ended. Please unstake and collect your rewards.
-                  </Alert> */}
-                  {/* <Alert variant="filled" severity="info" style={{ backgroundColor:"#06296e", marginBottom:'20px'}}>
+                  </Alert>
+                  <Alert variant="filled" severity="info" style={{ backgroundColor:"#06296e", marginBottom:'20px'}}>
                     Farm starts at 6:00 PM UTC on Mar 17 and will run for 3 days.
                     <ProgressCountdown base={moment().toDate()} unix_deadline={MainFarmStartTimeStamp} description="Farm starts in" />
-                  </Alert> */}
-                  {/* <Grid container spacing={3} style={{ marginTop: '20px' }}>
+                  </Alert>
+                  <Grid container spacing={3} style={{ marginTop: '20px' }}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 1)
                       .map((bank) => (
@@ -141,8 +143,8 @@ const Cemetery = () => {
                           <CemeteryCard bank={bank} />
                         </React.Fragment>
                       ))}
-                  </Grid> */}
-                </div>
+                  </Grid>
+                </div> */}
                 
                 {/* <Alert variant="filled" severity="info" style={{ marginTop: '50px' }}>
                   All below pools have ended. Please unstake and collect your rewards.
@@ -167,6 +169,7 @@ const Cemetery = () => {
                   </Grid>
                 </div> */}
                  
+              </div>
               </Box>
             </Container>
           ) : (

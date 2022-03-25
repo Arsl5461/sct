@@ -29,11 +29,12 @@ const CemeteryCard = ({ bank }) => {
                 display: 'flex',
                 justifyContent: 'center',
                 
+                
               }}
             >
               {/* <TokenSymbol size={50} symbol={bank.depositTokenName} /> */}
             </Box>
-            <Typography className="center wheat" variant="h5" component="h2">
+            <Typography className="center wheat top" variant="h5" component="h2">
               {/* {bank.depositTokenName} */}
               TOMB-FTM-LP
             </Typography>
@@ -62,9 +63,10 @@ const CemeteryCard = ({ bank }) => {
           {/* <Button style={{margin:'0px 10px 10px 10px'}} color="primary" size="midium" variant="contained" target="_blank" href={`${bank.buyLink}`}>
             Buy
           </Button> */}
-          <Button className="btn mar"  color="primary" size="midium" variant="contained" component={Link} to={`/cemetry/${bank.contract}`}>
+          <Button className="btn mar"  color="primary"  variant="contained" component={Link} to={`/cemetry/${bank.contract}`}>
             View
           </Button>
+          {/* <button className="btn mar"  variant="contained" component={Link} to={`/cemetry/${bank.contract}`}>View</button> */}
         </CardActions>
       </Card>
     </Grid>

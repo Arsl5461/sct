@@ -253,6 +253,21 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     sort: 6,
     closedForStaking: false,
   },
+  PshareAvaxLPPShareRewardPoolm: {
+    name: 'PSHARES by PSHARES-WAVAX LP',
+    poolId: 1,
+    sectionInUI: 2,
+    contract: 'PshareAvaxLPPShareRewardPool',
+    depositTokenName: 'PSHARES-WAVAX LP',
+    earnTokenName: 'PSHARES',
+    finished: false,
+    multiplier: '6000x',
+    poolStartUnixtimestamp: 1646992800,
+    buyLink: 'https://traderjoexyz.com/pool/avax/0xaC5363fbC73E0F54d2541f517094DDd99d58c305#/',
+    site: '/',
+    sort: 6,
+    closedForStaking: false,
+  },
 
   SctWAVAXRebates: {
     name: 'Bond WAVAX, earn SCT',
