@@ -50,7 +50,7 @@ const App: React.FC = () => {
       <Router>
         <Suspense fallback={<Loader />}>
           <Switch>
-            <Route exact path="/home">
+            <Route exact path="/">
               <Home />
             </Route>
             <Route path="/cemetry">

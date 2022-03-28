@@ -121,7 +121,7 @@ const Nav = () => {
               </Link>
             </Typography>
             <Box mr={20}>
-              <NavLink  style={{fontSize:"14px"}} color="color" to="/home" className={classes.link} activeClassName="active">
+              <NavLink  style={{fontSize:"14px"}} color="color" to="/" className={classes.link}>
                 Home
               </NavLink>
               <NavLink style={{fontSize:"14px"}} color="textPrimary" to="/cemetry" className={classes.link} activeClassName="active">
