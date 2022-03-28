@@ -14,8 +14,8 @@ import useHarvestFromMasonry from '../../../hooks/useHarvestFromMasonry';
 import useEarningsOnMasonry from '../../../hooks/useEarningsOnMasonry';
 import useTombStats from '../../../hooks/useTombStats';
 import { getDisplayBalance } from '../../../utils/formatBalance';
-import Crypto11 from "../../../assets/img/crypto_tomb_cash.f2b44ef4.png"
-import Fantom from "../../../assets/img/fantom.7660b7c5.svg"
+import Crypto11 from "../../../assets/img/crypto_tomb_cash.f2b44ef4.png";
+import Fantom from "../../../assets/img/fantom.7660b7c5.svg";
 
 const Harvest: React.FC = () => {
   const tombStats = useTombStats();
@@ -33,21 +33,22 @@ const Harvest: React.FC = () => {
 
   return (
     <Box>
-      <Card className="cemetry_cards-1">
-        <CardContent>
+      <div className="cemetry_cards-1">
+        <div>
           <StyledCardContentInner>
+              <div className="cemetry_images">
+<div className="rounded icons-harvest"><img src={Crypto11} width="50" height="50"/></div>
+<div className="rounded icons-harvest"><img src={Fantom} width="50" height="50"/></div> 
+</div>
             <StyledCardHeader>
               {/* <CardIcon>
                 <TokenSymbol symbol="TOMB" />
               </CardIcon> */}
-                     <div className="cemetry_images">
-     <div className="rounded icons-harvest"><img src={Crypto11} width="50" height="50"/></div>
-     <div className="rounded icons-harvest"><img src={Fantom} width="50" height="50"/></div> 
-   </div>
               {/* <Value value={getDisplayBalance(earnings)} />
               <Label text={`≈ $${earnedInDollars}`} color="#ffffff" /> */}
-
-              <Value value={"0.0000"} />
+<div className="wheat2">
+              <Value value={"$0.0000"}/>
+              </div>
               <Label text={`≈ $0.00`} color="#ffffff" />
               <Label text="SCT Earned" color="#ffffff" />
             </StyledCardHeader>
@@ -64,8 +65,8 @@ const Harvest: React.FC = () => {
               </Button>
             </StyledCardActions>
           </StyledCardContentInner>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
       <Box mt={2} style={{ color: '#FFF' }}>
         {canClaimReward ? (
           ''

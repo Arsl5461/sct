@@ -227,7 +227,7 @@ The algorithmic token pegged to FTM</div>
                 style={{borderColor: "var(--accent-light)" }}
               >
                 +&nbsp;
-                <img alt="metamask fox" style={{ width: '25px' }} src={MetamaskFox} />
+                <img alt="metamask fox" style={{ width: '20px' }} src={MetamaskFox} />
               </Button>
     
   </div>

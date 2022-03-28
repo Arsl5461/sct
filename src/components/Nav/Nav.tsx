@@ -1,8 +1,9 @@
 import React from 'react';
 import clsx from 'clsx';
-import { Link } from 'react-router-dom';
+import { Link,NavLink } from 'react-router-dom';
 import Image from 'material-ui-image';
-import CashImage from '../../assets/img/shiba_logo.svg';
+import {FormControl, InputLabel, Select, MenuItem } from '@material-ui/core';
+// import CashImage from '../../assets/img/shiba_logo.svg';
 import {
   AppBar,
   Box,
@@ -26,6 +27,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AccountButton from './AccountButton';
+import Dropdown from './Dropdown';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -42,7 +44,8 @@ const useStyles = makeStyles((theme) => ({
     'backdrop-filter': "blur(2px)",
     // borderBottom: `1px solid ${theme.palette.divider}`,
     padding: '0 10px',
-    marginBottom: '3rem',
+    height:'50px',
+    // marginBottom: '3rem',
     fontFamily: 'Amarante,cursive',
     // z-index: 1000,
     // position: StaticRange,
@@ -66,9 +69,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '30px',
     flexGrow: 1,
   },
+  form:{
+width:"120px",
+marginRight:"10px",
+color:"black",
+  },
   link: {
     textTransform: 'uppercase',
-    color: 'var(--white)',
+    color: 'wheat',
     fontSize: '14px',
     margin: theme.spacing(1, 1),
     textDecoration: 'none',
@@ -113,30 +121,30 @@ const Nav = () => {
               </Link>
             </Typography>
             <Box mr={20}>
-              <Link  style={{fontSize:"14px"}} color="color" to="/" className={classes.link}>
+              <NavLink  style={{fontSize:"14px"}} color="color" to="/home" className={classes.link} activeClassName="active">
                 Home
-              </Link>
-              <Link style={{fontSize:"14px"}} color="textPrimary" to="/cemetry" className={classes.link}>
+              </NavLink>
+              <NavLink style={{fontSize:"14px"}} color="textPrimary" to="/cemetry" className={classes.link} activeClassName="active">
                 Cemetery
-              </Link>
-              <Link style={{fontSize:"14px"}} color="textPrimary" to="/masonry" className={classes.link}>
+              </NavLink>
+              <NavLink style={{fontSize:"14px"}} color="textPrimary" to="/masonry" className={classes.link} activeClassName="active">
                 Mosonry
-              </Link>
-              <Link style={{fontSize:"14px"}} color="textPrimary" to="/pit" className={classes.link}>
+              </NavLink>
+              <NavLink style={{fontSize:"14px"}} color="textPrimary" to="/pit" className={classes.link} activeClassName="active">
                 Pit
-              </Link>
-              <Link style={{fontSize:"14px"}} color="textPrimary" to="/rebates" className={classes.link}>
+              </NavLink>
+              <NavLink style={{fontSize:"14px"}} color="textPrimary" to="/rebates" className={classes.link} activeClassName="active">
                 Swap
-              </Link>
-              <Link style={{fontSize:"14px"}} color="textPrimary" to="/treasury" className={classes.link}>
+              </NavLink>
+              <NavLink style={{fontSize:"14px"}} color="textPrimary" to="/treasury" className={classes.link} activeClassName="active">
                 Regulations
-              </Link>
-              <Link style={{fontSize:"14px"}} color="textPrimary" to="/treasury" className={classes.link}>
+              </NavLink>
+              <NavLink style={{fontSize:"14px"}} color="textPrimary" to="/treasury" className={classes.link} activeClassName="active">
                 Compound
-              </Link>
-              <Link style={{fontSize:"14px"}} color="textPrimary" to="/treasury" className={classes.link}>
+              </NavLink>
+              <NavLink style={{fontSize:"14px"}} color="textPrimary" to="/treasury" className={classes.link} activeClassName="active">
                 Lending
-              </Link>
+              </NavLink>
               {/* <Link style={{fontSize:"15px"}} color="textPrimary" to="/treasury" className={classes.link}>
                 Docs
               </Link> */}
@@ -165,6 +173,20 @@ const Nav = () => {
                 Docs
               </a>
             </Box>
+              <FormControl fullWidth className={classes.form}>
+  <InputLabel id="demo-simple-select-label">B_subdomain</InputLabel>
+  <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
+
+    // label="Age"
+    // onChange={}
+  >
+    <MenuItem value={10}>to A_subdomain</MenuItem>
+    <MenuItem value={20}>to B_subdomain</MenuItem>
+    <MenuItem value={30}>to C_subdomain</MenuItem>
+  </Select>
+</FormControl>
             <AccountButton text="My Wallet" />
           </>
         ) : (
@@ -223,6 +245,9 @@ const Nav = () => {
                 {/* <ListItem button component="a" href="https://2omb.finance">
                   <ListItemText>2omb</ListItemText>
                 </ListItem> */}
+               
+  
+
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="My Wallet"/>
                 </ListItem>

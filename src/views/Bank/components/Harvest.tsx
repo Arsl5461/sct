@@ -17,6 +17,8 @@ import TokenSymbol from '../../../components/TokenSymbol';
 import { Bank } from '../../../tomb-finance';
 import useTombStats from '../../../hooks/useTombStats';
 import useShareStats from '../../../hooks/usetShareStats';
+import Crypto11 from "../../../assets/img/crypto_tomb_cash.f2b44ef4.png"
+import Fantom from "../../../assets/img/fantom.7660b7c5.svg"
 
 interface HarvestProps {
   bank: Bank;
@@ -38,11 +40,13 @@ const Harvest: React.FC<HarvestProps> = ({ bank }) => {
   return (
     <div className='cemetry_cards-1'>
       <div>
+            <div className='cemetry_images'>
+              {/* <TokenSymbol symbol={bank.earnToken.symbol} /> */}
+              <div className="rounded icons-harvest icon-mar"><img src={Crypto11} width="50" height="50"/></div>
+
+            </div>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon>
-              <TokenSymbol symbol={bank.earnToken.symbol} />
-            </CardIcon>
             <Value value={getDisplayBalance(earnings)} />
             <Label text={`≈ $${earnedInDollars}`} />
             <Label text={`${tokenName} Earned`} />

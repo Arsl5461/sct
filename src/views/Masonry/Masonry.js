@@ -93,7 +93,7 @@ const Masonry = () => {
     <>
       <Typography color="textPrimary" align="center" variant="h3" gutterBottom>
         <strong style={{color:"wheat"}}>Masonry</strong>
-         <div className='bio wheat'>Earn TSHARE by staking LP</div>
+         <div className='bio wheat font12'>Earn TSHARE by staking LP</div>
       </Typography>
       <Box mt={5}>
         <Grid container justify="center" spacing={3}>

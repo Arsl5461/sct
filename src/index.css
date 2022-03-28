@@ -791,6 +791,7 @@ color: #000;
   /* align-items: center; */
   justify-content: center;
   width: 100%;
+  margin-bottom: 3rem;
 }
 .stat1{
   display: flex;
@@ -862,6 +863,27 @@ margin-left: 20px;
 .wheat{
   color:wheat;
 }
+.wheat2{
+  color: wheat !important;
+}
+.wid{
+  width:120%!important;
+}
+.active{
+  color: rgba(109,255,191,1) !important;
+  text-shadow: 0 -2px 8px rgb(82 194 230 / 50%)!important;
+  
+}
+.icon-mar{
+  margin-left: 35px;
+}
+.icon-mar2{
+  margin-left: 80px;
+}
+.icon-mar3{
+  margin-left: 55px !important;
+}
+
 .tvl_amount span{
   font-weight: bold;
 

@@ -8,15 +8,15 @@ function Stats() {
     <div className='stats'>
   <div className='stat1'>
 <img src={Crypto1} className="crypto1"></img>
-<h1 className='wheat'>0.9768FTM</h1>
+<h1 className='wheat2'>0.9768FTM</h1>
   </div>
   <div className='stat2'>
   <img src={Crypto2}></img>
-  <h1 className='wheat'>2,595.4584FTM</h1>
+  <h1 className='wheat2'>2,595.4584FTM</h1>
   </div>
   <div className='stat3'>
   <img src={Crypto1}></img>
-  <h1 className='wheat'>0.9800FTM</h1>
+  <h1 className='wheat2'>0.9800FTM</h1>
   </div>
 </div>
     </>

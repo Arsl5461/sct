@@ -12,6 +12,8 @@ import IconButton from '../../../components/IconButton';
 import Label from '../../../components/Label';
 import Value from '../../../components/Value';
 import { ThemeContext } from 'styled-components';
+import Crypto11 from "../../../assets/img/crypto_tomb_cash.f2b44ef4.png"
+
 
 import useApprove, { ApprovalState } from '../../../hooks/useApprove';
 import useModal from '../../../hooks/useModal';
@@ -93,11 +95,14 @@ const Stake: React.FC<StakeProps> = ({ bank }) => {
   return (
     <div className='cemetry_cards-1'>
       <div>
+      <div className='cemetry_images'>
+              {/* <TokenSymbol symbol={bank.earnToken.symbol} /> */}
+              <div className="rounded icons-harvest icon-mar2"><img src={Crypto11} width="50" height="50"/></div>
+
+            </div>
         <StyledCardContentInner>
           <StyledCardHeader>
-            <CardIcon>
-              <TokenSymbol symbol={bank.depositToken.symbol} size={54} />
-            </CardIcon>
+            
             <Value value={getDisplayBalance(stakedBalance, bank.depositToken.decimal)} />
             <Label text={`≈ $${earnedInDollars}`} />
             <Label text={`${bank.depositTokenName} Staked`} />

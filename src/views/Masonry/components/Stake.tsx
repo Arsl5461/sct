@@ -78,8 +78,8 @@ const Stake: React.FC = () => {
 
   return (
     <Box>
-      <Card className="cemetry_cards-1">
-        <CardContent>
+      <div className="cemetry_cards-1">
+        <div>
           <StyledCardContentInner>
             <StyledCardHeader>
               {/* <CardIcon>
@@ -89,7 +89,9 @@ const Stake: React.FC = () => {
      <div className="rounded icons-harvest"><img src={Crypto11} width="50" height="50"/></div>
      <div className="rounded icons-harvest"><img src={Fantom} width="50" height="50"/></div> 
    </div>
+   <div className="wheat2">
               <Value value={getDisplayBalance(stakedBalance)} />
+              </div>
               <Label text={`≈ $${tokenPriceInDollars}`} color="#ffffff" />
               {/* <Value value={"0.0000"} />
               <Label text={`≈ $0.00`} color="#ffffff" /> */}
@@ -121,8 +123,8 @@ const Stake: React.FC = () => {
               )}
             </StyledCardActions>
           </StyledCardContentInner>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
 
       <Box mt={2} style={{ color: '#FFF' }}>
         {canWithdrawFromMasonry ? (
